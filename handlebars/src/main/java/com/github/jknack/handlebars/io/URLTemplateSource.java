@@ -67,22 +67,16 @@ public class URLTemplateSource extends AbstractTemplateSource {
   }
 
   @Override public String content(final Charset charset) throws IOException {
-    Reader reader = null;
-    final int bufferSize = 1024;
-    try {
-      reader = reader(charset);
-      char[] cbuf = new char[bufferSize];
-      StringBuilder sb = new StringBuilder(bufferSize);
-      int len;
-      while ((len = reader.read(cbuf, 0, bufferSize)) != -1) {
-        sb.append(cbuf, 0, len);
+      final int bufferSize = 1024;
+      try (Reader reader = reader(charset)) {
+          char[] cbuf = new char[bufferSize];
+          StringBuilder sb = new StringBuilder(bufferSize);
+          int len;
+          while ((len = reader.read(cbuf, 0, bufferSize)) != -1) {
+              sb.append(cbuf, 0, len);
+          }
+          return sb.toString();
       }
-      return sb.toString();
-    } finally {
-      if (reader != null) {
-        reader.close();
-      }
-    }
   }
 
   @Override

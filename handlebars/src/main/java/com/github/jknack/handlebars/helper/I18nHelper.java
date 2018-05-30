@@ -377,16 +377,10 @@ class DefI18nSource implements I18nSource {
       // The below is a copy of the default implementation.
       String bundleName = toBundleName(baseName, locale);
       String resourceName = toResourceName(bundleName, "properties");
-      InputStream stream = null;
-      try  {
-        stream = loader.getResourceAsStream(resourceName);
+      try (InputStream stream = loader.getResourceAsStream(resourceName)) {
         PropertyResourceBundle bundle = new PropertyResourceBundle(
             new InputStreamReader(stream, charset));
         return bundle;
-      } finally {
-        if (stream != null) {
-          stream.close();
-        }
       }
     }
   }
