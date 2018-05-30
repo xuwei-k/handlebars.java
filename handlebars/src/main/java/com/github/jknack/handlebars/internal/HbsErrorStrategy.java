@@ -31,14 +31,6 @@ import org.antlr.v4.runtime.misc.IntervalSet;
 import org.apache.commons.lang3.StringUtils;
 
 import com.github.jknack.handlebars.HandlebarsException;
-import com.github.jknack.handlebars.internal.HbsParser.AmpvarContext;
-import com.github.jknack.handlebars.internal.HbsParser.BlockContext;
-import com.github.jknack.handlebars.internal.HbsParser.CommentContext;
-import com.github.jknack.handlebars.internal.HbsParser.DelimitersContext;
-import com.github.jknack.handlebars.internal.HbsParser.PartialContext;
-import com.github.jknack.handlebars.internal.HbsParser.TvarContext;
-import com.github.jknack.handlebars.internal.HbsParser.UnlessContext;
-import com.github.jknack.handlebars.internal.HbsParser.VarContext;
 
 /**
  * Fail in upon first error.

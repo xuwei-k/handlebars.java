@@ -23,19 +23,6 @@ import java.util.List;
 import org.antlr.v4.runtime.CommonToken;
 import org.antlr.v4.runtime.Token;
 
-import com.github.jknack.handlebars.internal.HbsParser.AmpvarContext;
-import com.github.jknack.handlebars.internal.HbsParser.BlockContext;
-import com.github.jknack.handlebars.internal.HbsParser.CommentContext;
-import com.github.jknack.handlebars.internal.HbsParser.DelimitersContext;
-import com.github.jknack.handlebars.internal.HbsParser.NewlineContext;
-import com.github.jknack.handlebars.internal.HbsParser.PartialContext;
-import com.github.jknack.handlebars.internal.HbsParser.SpacesContext;
-import com.github.jknack.handlebars.internal.HbsParser.TemplateContext;
-import com.github.jknack.handlebars.internal.HbsParser.TextContext;
-import com.github.jknack.handlebars.internal.HbsParser.TvarContext;
-import com.github.jknack.handlebars.internal.HbsParser.UnlessContext;
-import com.github.jknack.handlebars.internal.HbsParser.VarContext;
-
 /**
  * Remove space and lines according to the Mustache Spec.
  *
